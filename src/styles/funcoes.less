@@ -1,0 +1,11 @@
+.centralizar {
+     max-width: 1024px;
+     width: 100%;
+     margin: 0 auto;
+}
+
+.calcularGrid(@columnGap, @amount) {
+     @resultado: ((100% - @columnGap) / @amount);
+     grid-template-columns: repeat(@amount, @resultado);
+     column-gap: @columnGap;
+}
